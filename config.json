@@ -1,0 +1,12 @@
+{
+  "medium" : {
+    "key": "<MEDIUM CLIENT ID>",
+    "secret": "<MEDIUM CLIENT SECRET>"
+  },
+  "twitter" : {
+    "bearer": "<TWITTER OAUTH2 APPLICATION-ONLY BEARER TOKEN>"
+  },
+  "port": "<PORT>",
+  "sessionSecret": "<SESSION SECRET>",
+  "callbackUri": "<OAUTH2 CALLBACK URI>"
+}

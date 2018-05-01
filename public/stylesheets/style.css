@@ -1,0 +1,86 @@
+body {
+  padding: 20px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #1e2b35;
+}
+
+header h2 {
+  color:#5b6c7b;
+  text-align: center;
+}
+
+a {
+  color: #00B7FF;
+}
+
+input {
+  /*! border-radius: 40px; */
+  font-size: 4em;
+  color: #ccab1c;
+  background: #637a8c;
+  border: none;
+  padding: 0px 20px;
+}
+
+form {
+  display: flex;
+  margin: 0 auto;
+}
+
+button {
+  border: none;
+  background: #ccab1c;
+  font-size: 4em;
+  color:#1e2b35;
+  padding: 0px 20px;
+}
+
+section {
+  display:flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+p {
+  text-align: center;
+  color:#ccab1c;
+}
+
+ul {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+ul li{
+  color:#ccab1c;
+}
+
+form.result {
+  flex-direction: column;
+}
+
+form.result input.title {
+  min-width: 50vw;
+  font-size: 3em;
+  padding: 20px;
+}
+
+form.result input.description {
+  min-width: 50vw;
+  font-size: 2em;
+  padding: 20px;
+}
+
+.hidden {
+  display:none;
+}
+
+div.tweets {
+  width: 500px;
+  min-width: 220px;
+  margin: 0 auto;
+}
+
+iframe {
+
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medium Tweetnotes Generator</title>
+  <link href='https://greenmesa.co.uk/tweetnotes/stylesheets/style.css' rel='stylesheet'>
+</head>
+<body>
+  <header><h2>It's Tweetnote Time!</h2></header>
+  <section>
+  {{^mediumAuth}}
+    <p>Before we can post to your Medium account, you need to grant access. <a href="/tweetnotes/medium-login">Click here to begin!</a></p></header>
+  {{/mediumAuth}}
+  {{#mediumAuth}}
+    <p><a href="/tweetnotes/logout">Log out</a></p>
+    <form method="post" action="/tweetnotes/fetch-thread">
+      <input type="text" placeholder="TweetId, eg. 99874772" name="tweetId">
+      <button type="submit">Unroll!</button>
+    </form>
+  {{/mediumAuth}}
+  </section>
+</body>
+</html>

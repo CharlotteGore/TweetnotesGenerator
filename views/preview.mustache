@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medium Tweetnotes Generator</title>
+  <link href='https://greenmesa.co.uk/tweetnotes/stylesheets/style.css' rel='stylesheet'>
+</head>
+<body>
+  <header><h2>It's Tweetnote Time!</h2></header>
+  <script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+  <section>
+    <form class="result" method="post" action="/tweetnotes/post-to-medium">
+      <input required class="title" type="text" placeholder="The Title Of The Thing" name="title">
+      <input required class="description" type="text" placeholder="The Description of the thing" name="description">
+      <input class="description" type="text" placeholder="tag one, tag two, tag three" name="tags">
+      <textarea class="hidden" name="content">{{rawTweets}}</textarea>
+      <button type="submit">Post to Medium</button>
+    </form>
+    <div class="tweets">
+    {{#rawTweets}}
+    <blockquote class="twitter-tweet" data-conversation="none" data-lang="en">
+      <a href="{{.}}"></a>
+    </blockquote>
+    {{/rawTweets}}
+  </div>
+  </section>
+</body>
+</html>
+
+<!--
+<blockquote class="twitter-tweet" data-conversation="none" data-lang="en">
+<a href="https://twitter.com/ellardent/status/958009489747214336</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+-->
